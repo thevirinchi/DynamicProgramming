@@ -9,6 +9,7 @@ int MatrixChainOrder(int p[], int n){
 		for (i=1; i<n-L+1; i++){
 			cout << "i: " << i << " | upto: " << n-L+1 << endl;
 			j = i+L-1;
+			cout << "j: " << j << " | upto: " << j+L-1 << endl;
 			m[i][j] = INT_MAX;
 			for (k=i; k<=j-1; k++){
 				q = m[i][k] + m[k+1][j] + p[i-1]*p[k]*p[j];
